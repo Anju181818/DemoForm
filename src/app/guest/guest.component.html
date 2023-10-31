@@ -5,7 +5,7 @@
     <form [formGroup]="feedbackForm" (ngSubmit)="submitFeedback()">
         <label>Name <span class="red">*</span></label>
         <input type="text" class="form-control" formControlName="Name" placeholder="userName">
-        <p class="invalid-input"><span *ngIf="!feedbackForm.get('Name').valid && feedbackForm.get('Name').touched"> Please enter minimum 4 character</span></p>
+        <p class="invalid-input"><span *ngIf="!feedbackForm.get('Name').valid && feedbackForm.get('Name').touched"> Please enter mini 4 character</span></p>
         <label>Email <span class="red">*</span></label>
         <input type="email" class="form-control" formControlName="Email" placeholder="email">
         <p class="invalid-input"><span *ngIf="!feedbackForm.get('Email').valid && feedbackForm.get('Email').touched"> Please enter Email</span></p>
