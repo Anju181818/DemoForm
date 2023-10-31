@@ -1,0 +1,71 @@
+<div class="feedback-wrapper">
+<div class="feedback-container">
+    <h3>Feedback Form</h3>
+    <p class="valiadations">How do you rate your overall Experience?</p>
+    <form [formGroup]="feedbackForm" (ngSubmit)="submitFeedback()">
+        <label>Name <span class="red">*</span></label>
+        <input type="text" class="form-control" formControlName="Name" placeholder="userName">
+        <p class="invalid-input"><span *ngIf="!feedbackForm.get('Name').valid && feedbackForm.get('Name').touched"> Please enter minimum 4 character</span></p>
+        <label>Email <span class="red">*</span></label>
+        <input type="email" class="form-control" formControlName="Email" placeholder="email">
+        <p class="invalid-input"><span *ngIf="!feedbackForm.get('Email').valid && feedbackForm.get('Email').touched"> Please enter Email</span></p>
+        <label>Company </label>
+        <input type="text" class="form-control" formControlName="Company" placeholder="Company">
+        <label>Comments</label>
+        <textarea id="comments" class="form-control" name="comments"  formControlName="Comments" placeholder="Comments"></textarea>
+        <div class="btn-container"><button class="form-button">Submit</button></div>
+    </form>
+    <!-- <p>{{feedbackForm.value|json}}</p> -->
+    
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="feedback-form">
+    <h2>Guest Feedback Form</h2>
+    <form [formGroup]="feedbackForm" (ngSubmit)="submitFeedback()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email">
+      </div>
+      <div class="form-group">
+        <label for="company">Company:</label>
+        <input type="text" id="company" formControlName="company">
+      </div>
+      <div class="form-group">
+        <label for="comments">Comments:</label>
+        <textarea id="comments" formControlName="comments"></textarea>
+      </div>
+      <button type="submit" [disabled]="!feedbackForm.valid">Submit Feedback</button>
+    </form>
+  </div> -->
+  
+
+
+
+

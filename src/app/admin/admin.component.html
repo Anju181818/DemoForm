@@ -1,0 +1,61 @@
+<div class="admin-view">
+  <h2>Administrator View</h2>
+  <table class="table table table-striped table-light">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Company</th>
+        <th scope="col">Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="feedbackData.length > 0; else noRecordsFound">
+      </ng-container>
+      <tr *ngFor="let feedback of feedbackData" >
+        <td>{{ feedback.Name }}</td>
+        <td>{{ feedback.Email }}</td>
+        <td>{{ feedback.Company }}</td>
+        <td>{{ feedback.Comments }}</td>
+      </tr>
+    
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noRecordsFound>
+  <td  class="center" colspan="4">No Record Is Present</td>
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="admin-view">
+    <h2>Administrator View</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Company</th>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let feedback of feedbackData">
+          <td>{{ feedback.Name }}</td>
+          <td>{{ feedback.Email }}</td>
+          <td>{{ feedback.Company }}</td>
+          <td>{{ feedback.Comments }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  -->

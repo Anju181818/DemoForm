@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+ul {
+    display: inline-flex;
+    margin-bottom: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+li {
+    padding: 10px 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff !important;
+}
